@@ -1,0 +1,790 @@
+﻿body {
+    margin: 0px;
+    font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow-x:hidden;
+}
+* { box-sizing: border-box; }
+h1{
+    margin: 0px;
+}
+h2{
+    margin-bottom:5px;
+    margin-top: 0px;
+    font-weight: 300;
+    font-size: 50px;
+
+}
+li, ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+.relative{
+    position: relative;
+}
+section{
+    min-height: 700px;
+    padding-top: 30px;
+}
+.content{
+    margin-top: 20px;
+}
+section#profile{
+    background-color:#DEDEDE;
+}
+section#work{
+    background-color:#C2C2C2;
+}
+section#project{
+    background-color:#A9A9A9;
+}
+section#awards{
+    background-color:#828282;
+}
+section#life{
+    background-color:#636363;
+}
+
+/*bootstrap accordions*/
+.collapse.in {
+    display: block;
+}
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .35s;
+    -o-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-property: height,visibility;
+    -o-transition-property: height,visibility;
+    transition-property: height,visibility;
+}
+.collapse {
+    display: none;
+}
+
+
+/*Inline Blocks Container*/
+.inlineBlocksContainer .inlineBlocks{
+    display: inline-block;
+}
+.inlineBlocksContainer{
+    display: inline-block;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 100%;
+}
+.inlineBlocksContainer:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+/*FIXED HEADER*/
+.navTabs li{
+    text-decoration:none;
+    display: inline-block;
+    line-height: 3em;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    flex-basis: 0;
+    flex-grow:1;
+    text-align:center;
+    font-size: 12px;
+}
+.navTabs li.active{
+    background-color: black;
+    color: white;
+}
+.navTabs li a{
+    display:block;
+    position:relative;
+}
+.navTabs li a:hover{
+    background-color:black;
+    color:white;
+}
+.navTabs li a span{
+    padding-left: 32px;
+
+}
+.navTabs li a i{
+    font-size: 24px;
+    display:inline;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navTabs{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    display:flex;
+    /*background: pink;*/
+    background-color: rgba(255,255,255,.8);
+    align-items:center;
+    justify-content:space-around;
+}
+.fixedHeading{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+@media only screen and (max-width: 500px) {
+    /*set header non fixed*/
+}
+
+/*Home*/
+#home .titleBlock{
+    text-align:center;
+}
+#home .titleBlock h1{
+    margin-bottom:5px;
+    font-weight: 300;
+    font-size: 80px;
+}
+#home .titleBlock p.kicker{
+    margin:0px;
+}
+#home div.tabsWrap{
+    padding: 2em 30px 5px 30px;
+}
+#home div.tabsWrap .tabContentArea{
+    min-height: 300px;
+    position:relative;
+}
+    /*Tabs*/
+#home div.tabsWrap .nav-tabs {
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+#home div.tabsWrap .nav:after, .nav:before {
+    display: table;
+    content: " ";
+}
+#home div.tabsWrap .nav:after{
+    clear: both;
+}
+#home div.tabsWrap .nav-tabs>li {
+    /*float: left;
+    margin-bottom: -1px;
+    display: block;*/
+    position: relative;
+
+    /*Justified*/
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+
+#home div.tabsWrap .tabContentArea>.tab-pane {
+    display: none;
+    height: 100%;
+}
+#home div.tabsWrap .tabContentArea>.active {
+    display: block;
+}
+#home div.tabsWrap .fade.in {
+    opacity: 1;
+}
+#home div.tabsWrap .fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+#home div.tabsWrap .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li>a:hover {
+    /*Styles of link Text of Active*/
+    font-weight:bold;
+    cursor: pointer;
+    background-color: #E9E9E9;
+    /*border: 1px solid #ddd;*/
+    border: 1px solid black;
+    border-bottom-color: transparent;
+}
+#home div.tabsWrap .nav-tabs>li>a {
+    /*Styles of link Text non-active*/
+    margin-right: 2px;
+    font-size:18px;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    text-align:center;
+}
+    /*Contact*/
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer{
+    display:table;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIconContainer{
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon{
+    border-radius:50%;
+    border: 1px solid black;
+    margin: 0 auto;
+    height: 7em;
+    width: 7em;
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon i{
+    display:block;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon i::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon i:hover:before{
+    color:white;
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon i::after{
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0;
+
+    top: -2px;
+    left: -2px;
+    padding: 2px;
+    z-index: -1;
+    background: black;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.3s;
+    transition: transform 0.2s, opacity 0.3s;
+
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+}
+#home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon i:hover:after{
+    opacity: 1;
+    transform: scale(1);
+}
+#home #captionDescr{
+    text-align: center;
+}
+
+    /*Skill Picker*/
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer .inlineBlocks{
+    min-width: 450px;
+    text-align: center;
+    margin-top: 20px;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer{
+    
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer:after {
+	
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer li{
+    line-height: 3em;
+    position: relative;
+    border-bottom: 1px solid #636363;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer li a{
+    display:block;
+}
+#home div.tabsWrap .inlineBlocksContainer li:hover, 
+#home div.tabsWrap .inlineBlocksContainer li.active{
+    background-color:black;
+}
+#home div.tabsWrap .inlineBlocksContainer li:hover a, 
+#home div.tabsWrap .inlineBlocksContainer li.active a{
+    color:white;
+}
+
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer ul{
+    border: 1px solid #636363;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer li i{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 1em;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton{
+    position: relative;
+    cursor: pointer;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin: 0;
+    font-size: 2em;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton:hover p{
+    color: white;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton:active p{
+    color: black;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton a{
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton:hover a{
+    background: black;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton:hover a span{
+    display: inline-block;
+    box-shadow: 0 0 0 4px black;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.02, 1.2);
+    opacity: 1;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton a span{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Picked Skill Container*/
+#home div.tabsWrap .tabContentArea #skillPickerTab div.filteredSkills{
+    display: none;
+    position: relative;
+    background: grey;
+    text-align: center;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.filteredSkills.active{
+    display: block;
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.filteredSkills .filteredSkills_header {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 25px;
+   background-color: black;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab div.filteredSkills .filteredSkills_header i {
+    color: white;
+    position: absolute;
+    height: 100%;
+    right: 5px;
+    cursor: pointer;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .projectBox{
+    border: 1px solid black;
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    vertical-align: top;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .projectBox .projectTitle{
+    display: block;
+    margin: 0;
+    height: 50px;
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .projectBox .projectImg{
+    /*background: url("../resource/img/300x200/DSC03812.png") center center no-repeat;*/
+    background-repeat:no-repeat;
+    background-position: center center;
+    height: 200px;
+    width: 100%;
+
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .projectBox .projectHiddenDesc{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    background: black;
+    color: white;
+    opacity: 0.7;
+
+    -webkit-transition: width 1.5s ease;
+    -moz-transition: width 1.5s ease;
+    -o-transition: width 1.5s ease;
+    transition: width 1.5s ease;
+    overflow: hidden;
+    width: 0px;
+   
+}
+#home div.tabsWrap .tabContentArea #skillPickerTab .projectBox .projectCaption{
+    height: 70px;
+}
+
+/*PDF*/
+.pdfobject-container { 
+    height: 500px;
+}
+.pdfBlocker { 
+    height: auto;
+    margin-top: 20px;
+}
+.pdfBlocker a{
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color:rgba(192,192,192,0.3);
+    cursor: pointer;
+    display: block;
+}
+.pdfBlocker:hover a{
+    background-color:rgba(99,99,99,0.3);
+    border: 2px solid black;
+}
+.pdfBlocker.active:hover a{
+    display: none;
+}
+.pdfobject { border: 1px solid #666; }
+
+/*PROFILE*/
+#profile h2{
+    text-align: center;
+}
+#profile .introBlock .introWrap .hoverButton{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 90px;
+    z-index: 2;
+    border: 1px solid black;
+
+    margin: 0 auto;
+}
+#profile .introBlock .introWrap .hoverButton:hover{
+    color: white;
+    background-color: black;
+}
+
+nav li a:hover:after{ width: 100%; }
+
+#profile .introBlock .introWrap .animationWrap.active{
+    transition: transform 1.5s ease;
+}
+#profile .introBlock .introWrap .animationWrap{
+    transition: transform 0.5s linear;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+#profile .introBlock .introWrap .hoverButton.active{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#profile .introBlock .introWrap .infoAccordion{
+    /*background: green;*/
+    text-align: left;
+    /*padding-left: 15px;*/
+    height: 100%;
+
+    
+    position: absolute;
+    top:0;
+    right: 0;
+    
+
+    -webkit-transition: width 1.5s ease;
+    -moz-transition: width 1.5s ease;
+    -o-transition: width 1.5s ease;
+    transition: width 1.5s ease;
+    
+    display: inline-block;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+
+    width: 0px;
+}
+
+#profile .introBlock .introWrap{
+    display: block;
+    /*overflow: auto;*/
+    flex-grow:1;
+    width: 100%;
+    position: relative;
+    /*margin-top: 30px;*/
+}
+#profile .introBlock{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    height: 300px;
+    margin: 0px 20px 0px 20px;
+}
+
+/*COOP*/
+#work .coopSlicker{
+    width: 70%;
+    margin: 0 auto;
+}
+#work .coopSlicker .showSlicker{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
+#work .coopSlicker .slider-nav div{
+    text-align: center;
+    background-color: grey;
+    height: 40px;
+    line-height: 40px;
+}
+/*PROJECTS*/
+#project h2{
+    text-align: center;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+}
+.mansoryGridWrap{
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.mansoryGridWrap .grid .grid-item {
+  width: 320px;
+  height: 500px;
+  float: left;
+  /*background: #D26;*/
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel:active {
+    background: black;
+    cursor: pointer;
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel:active .accordionPanel i {
+    color: white;
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel i{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-size: 32px;
+    margin: 2px;
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel .iconWrap{
+    width: 100%;
+    height:15%;
+    position: relative;
+}
+
+
+
+.mansoryGridWrap .grid .grid-item .accordionPanel{
+    height: 500px;
+    background: white;
+    border: 1px solid black;
+    position: relative;
+}
+.mansoryGridWrap .grid .grid-item .hiddenAccordion{
+    height: 200px;
+    background-color: #636363;
+}
+.mansoryGridWrap .grid .grid-item.gridActive{
+    /*New Grid size*/
+    height: 700px
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel .innerPanel{
+    margin: 0px 15px 0px 15px;
+    border: 1px solid black;
+    background: white;
+    height: 85%;
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel .innerPanel .projectImage{
+    height: 85%;
+    border: 1px solid black;
+}
+.mansoryGridWrap .grid .grid-item .accordionPanel .innerPanel .projectCaption{
+    text-align:center;
+}
+
+
+/*Other Grid Item Sizes*/
+/*.grid-item--width2 { width: 320px; }*/
+.mansoryGridWrap .grid .grid-item--height2 { 
+    height: 400px; 
+
+}
+.mansoryGridWrap .grid .grid-item--height2 .accordionPanel{
+    height: 400px;
+}
+.mansoryGridWrap .grid .grid-item--height2.gridActive{
+    /*New Grid size + 200*/
+    height: 600px
+}
+.mansoryGridWrap .grid .grid-item--height3 { 
+    height: 300px; 
+
+}
+.mansoryGridWrap .grid .grid-item--height3 .accordionPanel{
+    height: 300px;
+}
+.mansoryGridWrap .grid .grid-item--height3.gridActive{
+    /*New Grid size + 200*/
+    height: 500px
+}
+.mansoryGridWrap .grid .grid-item--height4 { 
+    height: 200px; 
+
+}
+.mansoryGridWrap .grid .grid-item--height4 .accordionPanel{
+    height: 200px;
+}
+.mansoryGridWrap .grid .grid-item--height4.gridActive{
+    /*New Grid size + 200*/
+    height: 400px
+}
+.mansoryGridWrap .grid .grid-item--height4 .accordionPanel .innerPanel .projectImage{
+    /*New Grid size + 200*/
+    height: 70%;
+}
+/*
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }*/
+
+
+
+
+/*LIFE*/
+section#life{
+    padding-top: 0;
+}
+#life .lifeWindow{
+    width: 100%;
+    background: black;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space: nowrap;
+}
+#life .lifeWindow .lifePanel{
+    height: 100%;
+    width: 120px;
+    background: red;
+    display: inline-block;
+    vertical-align:top;
+    cursor:pointer;
+    position: relative;
+}
+#life .lifeWindow .lifePanel.toggleLife{
+    background-size: cover;
+    background-position-x: center;
+}
+#life .lifeWindow .lifePanel .lifeTextWrap{
+    height: 70px;
+    width: 100%;
+    padding: 10px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#life .lifeWindow .lifePanel .lifeCategoryText{
+    background: white;
+    width: 100%;
+    height: 100%;
+}
+
+#life .lifeWindow .lifePanel.lifeAccordion{
+    background: white;
+    border-width: 3px 0px;
+    border-style: solid;
+    border-color: black;
+
+    -webkit-transition: width 1.5s ease;
+    -moz-transition: width 1.5s ease;
+    -o-transition: width 1.5s ease;
+    transition: width 1.5s ease;
+
+    overflow: hidden;
+    width: 0px;
+}

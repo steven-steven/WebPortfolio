@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Steven</title>
+    <meta name="description" content="stevenPortfolio">
+    <meta name="author" content="Steven">
+
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f4dc2fb042.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="fixedHeading">
+            <div class="headerWrap">
+                <div class="tab-items">
+                    <nav class="navigation">
+                        <ul class="navTabs">
+                            <li><a href="#home">Steven</a></li>
+                            <li><a href="#profile"><i class="material-icons">person</i><span>Profile</span></a></li>
+                            <li><a href="#work"><i class="material-icons">work</i><span>Coop</span></a></li>
+                            <li><a href="#project"><i class="material-icons">adb<!--color lens--></i><span>Projects</span></a></li>
+                            <li><a href="#awards"><i class="material-icons">star</i><span>Awards</span></a></li>
+                            <li><a href="#life"><i class="material-icons">person_pin_circle</i><span>Life</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="content">
+        <section id="home">
+            <!--block out a section-->
+            <div class="titleBlock">
+                <h1> <span> Steven </span> </h1>
+                <p class="kicker"> Computer Engineering - University of Waterloo </p>
+                <hr />
+            </div>
+
+            <div class="tabsWrap">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#skillPickerTab">Select Skill</a></li>
+                    <li><a data-toggle="tab" href="#contactTab">Contacts</a></li>
+                    <li><a data-toggle="tab" href="#resumeTab">Resume</a></li>
+                </ul>
+
+                <div class="tabContentArea">
+                    <div id="skillPickerTab" class="tab-pane fade in active">
+                        <h3>Filter Activities based on Desired Skill</h3>
+                        <div class="inlineBlocksContainer">
+                            <div class="inlineBlocks">
+                                <p>Technical Skills</p>
+                                <ul>
+                                    <li class="skillTypes FilterAll" id="allTechnicalSkills"><a>ALL<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="net"><a>.NET with C#<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="htmlcss"><a>HTML/CSS & Javascript<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="java"><a>Java<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="android"><a>Android<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="robotics"><a>Robotics<i class="material-icons">check_box_outline_blank</i></a></li>
+                                </ul>
+                            </div>
+                            <div class="inlineBlocks">
+                                <p>SoftSkills</p>
+                                <ul>
+                                    <li class="skillTypes FilterAll" id="allSoftSkills"><a>ALL<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="communication"><a>Communication<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="teamwork"><a>Teamwork<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="criticalThinking"><a>Critical Thinking<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="independence"><a>Independence<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="creativityplanning"><a>Creativity<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="leadership"><a>Leadership<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="volunteering"><a>Volunteering<i class="material-icons">check_box_outline_blank</i></a></li>
+                                 </ul>
+                            </div>
+                            <div class="inlineBlocks">
+                                <p>Hobbies</p>
+                                <ul>
+                                    <li class="skillTypes FilterAll" id="allHobbies"><a>ALL<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="sports"><a>Sports<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="movieEditing"><a>Movie Editing<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="drone"><a>Aerial Photography (Drone)<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="3dModelling"><a>3D Modelling<i class="material-icons">check_box_outline_blank</i></a></li>
+                                </ul>
+                            </div>
+                            <div class="inlineBlocks">
+                                <p>Certification/Awards</p>
+                                <ul>
+                                    <li class="skillTypes FilterAll" id="allCertifications"><a>ALL<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="highSchool"><a>High School<i class="material-icons">check_box_outline_blank</i></a></li>
+                                    <li class="skillTypes" id="awardFilter"><a>awards<i class="material-icons">check_box_outline_blank</i></a></liclass="skillTypes">
+                                    <li class="skillTypes" id="academics"><a>Academics<i class="material-icons">check_box_outline_blank</i></a></liclass="skillTypes">
+                                </ul>
+                            </div>
+                        
+                        </div>
+                        <div class="runFilterButton"><a><span></span></a><p>Run Filter</p></div>
+                        <div class="filteredSkills">
+                            <div class="filteredSkills_header"><i class="material-icons">close</i></div>
+                            <div class="filteredSkillsInner">
+                                <div class="projectBox">
+                                    <p class="projectTitle">Title</p>
+                                    <div class="projectImg"></div>
+                                    <div class="projectHiddenDesc">Words lalal</div>
+                                    <p class="projectCaption">Short Description</p>
+                                </div>
+                                <div class="projectBox">
+                                    <p class="projectTitle">Title</p>
+                                    <div class="projectImg"></div>
+                                    <div class="projectHiddenDesc">Words lalal</div>
+                                    <p class="projectCaption">Short Description</p>
+                                </div>s
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="contactTab" class="tab-pane fade">
+                        <div class="contactContainer">
+                            <div class="contactIconContainer">
+                                <div class="contactIcon">
+                                    <a target="_blank" href="https://www.linkedin.com/in/steven-steven1999/"><i class="fa fa-3x fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="contactIconContainer">
+                                <div class="contactIcon">
+                                    <a target="_blank" href="https://www.instagram.com/steven_cooler/"><i class="fa fa-3x fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="contactIconContainer">
+                                <div class="contactIcon">
+                                    <a target="_blank" href="https://github.com/steven-steven"><i class="fa fa-3x fa-github"></i></a>
+                                </div>
+                            </div>
+                            <div class="contactIconContainer">
+                                <div class="contactIcon">
+                                    <a target="_blank" href="mailto:s3@edu.uwaterloo.ca"><i class="fa fa-3x fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <div class="contactIconContainer">
+                                <div class="contactIcon">
+                                    <a target="_blank" href="https://www.facebook.com/steven1999steven"><i class="fa fa-3x fa-facebook-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="resumeTab" class="tab-pane fade">
+                        <div class="pdfBlocker"><a></a><div id="pdfContainer"></div></div>
+                        <script src="pdfObject/pdfobject.js"></script>
+                        <script>PDFObject.embed("resource/Resume-Steven.pdf", "#pdfContainer");</script>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <p id="captionDescr">Made By Steven - Library Used: PDFObject, Mansory, Bootstrap, Jquery,m</p>
+
+            
+
+        </section
+        ><section id="profile">
+            <!--block out a section-->
+            <h2><span>Who Am I?</span></h2>
+             <div class="introBlock">
+                 <p>About Me</p>
+                 <div class="introWrap">
+                     <div class="animationWrap" data-toggle="toggle" data-target="#aboutAccordion">
+                         <div class="hoverButton">1</div>
+                     </div>
+                     <div class="infoAccordion" id="aboutAccordion">
+                        I learn anything.
+                     </div>
+                 </div>
+                 <p>Background</p>
+                 <div class="introWrap">
+                     <div class="animationWrap" data-toggle="toggle" data-target="#backgroundAccordion">
+                         <div class="hoverButton">2</div>
+                     </div>
+                     <div class="infoAccordion" id="backgroundAccordion">
+                         I was born in 1999, and grew up in my country - Indonesia. On September 2016, I decided to come to Canada to pursue a 5-year Computer Engineering degree in University of Waterloo.
+                         What brought me here was the co-op and entrepreuneurship opportunity University of Waterloo is known for, because I believe this sort of environment will help me succeed, learn, and continue to open-mindedly grow.
+                     </div>
+                 </div>
+                 <p>Goals</p>
+                 <div class="introWrap">
+                     <div class="animationWrap" data-toggle="toggle" data-target="#goalsAccordion">
+                         <div class="hoverButton">3</div>
+                     </div>
+                     <div class="infoAccordion" id="goalsAccordion">
+                         Short-Term: 
+                         Long-Term: 
+                     </div>
+                 </div>
+             </div>
+
+        </section
+        ><section id="work">
+             <h2><span>Coop</span></h2>
+            <!--block out a section-->
+             <div class="coopSlicker">
+                 <div class="showSlicker">
+                     <div>
+                         <p>Coop Term 1</p>
+                         <ul>
+                             <li>Company: Intellisoft Development Inc</li>
+                             <li>Duration: 4 Months</li>
+                             <li>Position: Jr. Web Developer</li>
+                         </ul>
+                         <p>In this job, I work into web projects within George Brown College. I learn CMS technologies and .NET.</p>
+                     </div>
+                     <div>
+                         <p>Coop Term 2</p>
+                         <p>Coming Soon</p>
+                     </div>
+                     <div>
+                         <p>Coop Term 3</p>
+                         <p>Coming Soon</p>
+                     </div>
+                     <div>
+                         <p>Coop Term 4</p>
+                         <p>Coming Soon</p>
+                     </div>
+                     <div>
+                         <p>Coop Term 5</p>
+                         <p>Coming Soon</p>
+                     </div>
+                     <div>
+                         <p>Coop Term 6</p>
+                         <p>Coming Soon</p>
+                     </div>
+                 </div>
+                 <div class="slider-nav">
+                     <div>Coop Term 1</div>
+                     <div>Coop Term 2</div>
+                     <div>Coop Term 3</div>
+                     <div>Coop Term 4</div>
+                     <div>Coop Term 5</div>
+                     <div>Coop Term 6</div>
+                 </div>
+             </div>
+
+        </section
+        ><section id="project">
+            <h2><span>Projects</span></h2>
+            <!--block out a section-->
+
+            <div class="mansoryGridWrap">
+             <div class="grid">
+                 <div class="grid-item">
+                     <div class="accordionPanel" href="#project1" data-toggle="collapse">
+                         <div class="innerPanel">
+                             &nbsp;
+                             <div class="projectImage">Image</div>
+                             <div class="projectCaption">Caption</div>
+                         </div>
+                         <div class="iconWrap"><i class="material-icons">keyboard_arrow_down</i></div>
+                     </div>
+                     <div id="project1" class="accordion collapse">
+                         <div class="hiddenAccordion">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         </div>
+                    </div>
+                 </div>
+                 <div class="grid-item grid-item--height2">
+                     <div class="accordionPanel" href="#project2" data-toggle="collapse">
+                         <div class="innerPanel">
+                             &nbsp;
+                             <div class="projectImage">Image</div>
+                             <div class="projectCaption">Caption</div>
+                         </div>
+                         <div class="iconWrap"><i class="material-icons">keyboard_arrow_down</i></div>
+                     </div>
+                     <div id="project2" class="accordion collapse">
+                         <div class="hiddenAccordion">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         </div>
+                     </div>
+                 </div>
+                 <div class="grid-item grid-item--height3">
+                     <div class="accordionPanel" href="#project3" data-toggle="collapse">
+                         <div class="innerPanel">
+                             &nbsp;
+                             <div class="projectImage">Image</div>
+                             <div class="projectCaption">Caption</div>
+                         </div>
+                         <div class="iconWrap"><i class="material-icons">keyboard_arrow_down</i></div>
+                     </div>
+                     <div id="project3" class="accordion collapse">
+                         <div class="hiddenAccordion">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         </div>
+                     </div>
+                 </div>
+                 <div class="grid-item grid-item--height4">
+                     <div class="accordionPanel" href="#project4" data-toggle="collapse">
+                         <div class="innerPanel">
+                             &nbsp;
+                             <div class="projectImage">Image</div>
+                             <div class="projectCaption">Caption</div>
+                         </div>
+                         <div class="iconWrap"><i class="material-icons">keyboard_arrow_down</i></div>
+                     </div>
+                     <div id="project4" class="accordion collapse">
+                         <div class="hiddenAccordion">
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         </div>
+                     </div>
+                 </div>
+                 
+             </div>
+            </div>
+
+        </section
+        ><section id="awards">
+            <h2><span>Awards</span></h2>
+            <!--block out a section-->
+
+        </section
+        ><section id="life">
+            <div class="lifeWindow">
+                <div class="lifePanel toggleLife" data-target="#life1" style="background-image: url(resource/img/life1.jpg)">
+            
+                    <div class="lifeTextWrap"><div class="lifeCategoryText">Toggle life 1</div></div>
+                </div
+                ><div class="lifePanel lifeAccordion" id="life1">
+                    Life 1 - kdbwdbwdbwhdbjh swygduwdgy
+                </div
+                ><div class="lifePanel toggleLife" data-target="#life2" style="background-image: url(resource/img/life2.jpg)">
+                    
+                     <div class="lifeTextWrap"><div class="lifeCategoryText">Toggle life 2</div></div>
+                </div
+                ><div class="lifePanel lifeAccordion" id="life2">
+                    Life 1 - kdbwdbwdbwhdbjh swygduwdgy
+                </div
+                ><div class="lifePanel toggleLife" data-target="#life3" style="background-image: url(resource/img/life3.jpg)">
+                    Toggle life 1
+                </div
+                ><div class="lifePanel lifeAccordion" id="life3">
+                    Life 1 - kdbwdbwdbwhdbjh swygduwdgy
+                </div
+                ><div class="lifePanel toggleLife" data-target="#life4">
+                    Toggle life 1
+                </div
+                ><div class="lifePanel lifeAccordion" id="life4">
+                    Life 1 - kdbwdbwdbwhdbjh swygduwdgy
+                </div
+                ><div class="lifePanel toggleLife" data-target="#life5">
+                    Toggle life 1
+                </div
+                ><div class="lifePanel lifeAccordion" id="life5">
+                    Life 1 - kdbwdbwdbwhdbjh swygduwdgy
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+
+    <script src="js/LocalStorage_Control.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/life.js"></script>
+    <script src="js/coop.js"></script>
+    
+    <script src="js/LocalStorage_Save.js"></script>
+    <script src="js/LocalStorage_Show.js"></script>
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>    
+
+</body>
+</html>
