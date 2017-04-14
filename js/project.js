@@ -2,7 +2,7 @@
 
 var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
-    columnWidth: 320
+    columnWidth: 250
 });
 $(".accordionPanel").on('click', function () {
     if (!$(this).siblings('.accordion')[0].classList.contains('collapse')) {

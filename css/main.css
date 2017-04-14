@@ -1,6 +1,7 @@
 ﻿body {
     margin: 0px;
     font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 0.7em;
     overflow-x:hidden;
 }
 * { box-sizing: border-box; }
@@ -32,7 +33,7 @@ a:active {
     position: relative;
 }
 section{
-    min-height: 700px;
+    min-height: 500px;
     padding-top: 30px;
 }
 .content{
@@ -100,7 +101,7 @@ section#life{
 .navTabs li{
     text-decoration:none;
     display: inline-block;
-    line-height: 3em;
+    line-height: 2.5em;
     border-width: 1px 0px 1px 0px;
     border-style: solid;
     flex-basis: 0;
@@ -125,7 +126,7 @@ section#life{
 
 }
 .navTabs li a i{
-    font-size: 24px;
+    font-size: large;
     display:inline;
     margin-top: 0;
     position: absolute;
@@ -232,7 +233,7 @@ section#life{
 #home div.tabsWrap .nav-tabs>li>a {
     /*Styles of link Text non-active*/
     margin-right: 2px;
-    font-size:18px;
+    font-size:1.2em;
     border: 1px solid transparent;
     border-radius: 4px 4px 0 0;
     position: relative;
@@ -257,10 +258,10 @@ section#life{
 }
 #home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon{
     border-radius:50%;
-    border: 1px solid black;
+    border: 1.4px solid black;
     margin: 0 auto;
-    height: 7em;
-    width: 7em;
+    height: 8em;
+    width: 8em;
 }
 #home div.tabsWrap .tabContentArea #contactTab .contactContainer .contactIcon i{
     display:block;
@@ -313,7 +314,8 @@ section#life{
 
     /*Skill Picker*/
 #home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer .inlineBlocks{
-    min-width: 450px;
+    min-width: 250px;
+    width: 24%;
     text-align: center;
     margin-top: 20px;
 }
@@ -324,7 +326,7 @@ section#life{
 	
 }
 #home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer li{
-    line-height: 3em;
+    line-height: 2.3em;
     position: relative;
     border-bottom: 1px solid #636363;
 }
@@ -349,7 +351,8 @@ section#life{
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: 1em;
+    right: 0.3em;
+    font-size: large;
 }
 #home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton{
     position: relative;
@@ -363,7 +366,7 @@ section#life{
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     margin: 0;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 #home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton:hover p{
     color: white;
@@ -377,8 +380,8 @@ section#life{
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 50px;
-    width: 50%;
+    height: 35px;
+    width: 30%;
     text-align: center;
     border: 1px solid black;
 
@@ -392,7 +395,7 @@ section#life{
 }
 #home div.tabsWrap .tabContentArea #skillPickerTab div.runFilterButton:hover a span{
     display: inline-block;
-    box-shadow: 0 0 0 4px black;
+    box-shadow: 0 0 0 2.3px black;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     transition: transform 0.2s, opacity 0.2s;
     -webkit-transform: scale(1.1);
@@ -481,7 +484,10 @@ section#life{
 }
 .pdfBlocker { 
     height: auto;
-    margin-top: 20px;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 .pdfBlocker a{
     position: absolute; 
@@ -581,13 +587,16 @@ nav li a:hover:after{ width: 100%; }
 }
 
 /*COOP*/
+section#work {
+    height: 550px;
+}
 #work .coopSlicker{
     width: 70%;
     margin: 0 auto;
 }
 #work .coopSlicker .showSlicker{
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     width: 100%;
     height: 300px;
     border: 1px solid black;
@@ -624,7 +633,7 @@ nav li a:hover:after{ width: 100%; }
 /* ---- grid-item ---- */
 
 .mansoryGridWrap .grid .grid-item {
-  width: 320px;
+  width: 250px;
   height: 500px;
   float: left;
   /*background: #D26;*/
@@ -654,6 +663,7 @@ nav li a:hover:after{ width: 100%; }
     width: 100%;
     height:15%;
     position: relative;
+    background-color: beige;
 }
 
 

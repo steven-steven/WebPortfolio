@@ -161,7 +161,12 @@
                     <div id="resumeTab" class="tab-pane fade">
                         <div class="pdfBlocker"><a></a><div id="pdfContainer"></div></div>
                         <script src="pdfObject/pdfobject.js"></script>
-                        <script>PDFObject.embed("resource/Resume-Steven.pdf", "#pdfContainer");</script>
+                        <script>
+                            var options = {
+                                pdfOpenParams: { zoom: "70%" },
+                            };
+                            PDFObject.embed("resource/Resume-Steven.pdf", "#pdfContainer", options);
+                        </script>
                     </div>
                 </div>
             </div>
@@ -280,8 +285,8 @@
                      <div class="accordionPanel" href="#project2" data-toggle="collapse">
                          <div class="innerPanel">
                              &nbsp;
-                             <div class="projectImage">Image</div>
-                             <div class="projectCaption">Caption</div>
+                             <div class="projectImage" style="background-image: url(resource/img/life1.jpg)">Image</div>
+                             <div class="projectCaption">4-months work Coop at Intellisoft Development Inc</div>
                          </div>
                          <div class="iconWrap"><i class="material-icons">keyboard_arrow_down</i></div>
                      </div>
