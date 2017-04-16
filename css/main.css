@@ -1,4 +1,5 @@
-﻿body {
+﻿html { font-size: 100% !important; }
+body {
     margin: 0px;
     font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 0.7em;
@@ -50,6 +51,7 @@ section#project{
 }
 section#awards{
     background-color:#828282;
+    height: 500px;
 }
 section#life{
     background-color:#636363;
@@ -288,8 +290,8 @@ section#life{
     transform: scale(1.3);
     opacity: 0;
 
-    top: -2px;
-    left: -2px;
+    top: 0px;
+    left: 0px;
     padding: 2px;
     z-index: -1;
     background: black;
@@ -482,7 +484,7 @@ section#life{
     margin: 10px;
 }
 /*Modal*/
-html { font-size: 100% !important; }
+
 
 /*PDF*/
 .pdfobject-container { 
