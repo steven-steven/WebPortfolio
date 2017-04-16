@@ -3,7 +3,7 @@
 function refreshMansory(){
     var $grid = $('.grid').masonry({
         itemSelector: '.grid-item',
-        columnWidth: 360
+        columnWidth: 343
     });
     $(".accordionPanel").on('click', function () {
         if (!$(this).siblings('.accordion')[0].classList.contains('collapse')) {
@@ -54,5 +54,8 @@ function displayMansoryProjects() {
             
         }
     }
-    refreshMansory();
+    setTimeout(function () {
+        refreshMansory();
+    }, 200);
 }
+

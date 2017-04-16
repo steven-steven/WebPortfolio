@@ -215,7 +215,13 @@ function displayskilledProjects() {
                     var projectImg = projectObj["imgSrc"];
                     var skills = projectObj["skills"].toString().replace(",",", ");
 
-                    $(".filteredSkillsInner").append('<div class="projectBox"><p class="projectTitle">' + projectName + '</p><div class="projectImg" style="background-image: url(' + projectImg + ')"></div><div class="projectHiddenDesc">' + projectDesc + '</div><p class="projectCaption">' + projectCaption + '</p></div>'); /*+ '<br/><br/>Skill Set: ' + skills*/
+                    var projectBoxHtml = '<div class="projectBox"><p class="projectTitle">' + projectName + '</p><div class="projectImg" style="background-image: url(' + projectImg + ')"></div><div class="projectHiddenDesc">' + projectDesc + '</div><p class="projectCaption">'
+                    projectBoxHtml += projectCaption + '</p>';
+                    if (true) {
+                        projectBoxHtml += ' <a onclick="openModal(\''+projectName+'\')"> Show More</a>';
+                    }
+                    projectBoxHtml += '</div>';
+                    $(".filteredSkillsInner").append(projectBoxHtml); /*+ '<br/><br/>Skill Set: ' + skills*/
                     refreshListener();
                 }
             }
@@ -223,4 +229,9 @@ function displayskilledProjects() {
     }
     console.log(pickedProjects);
     
+}
+
+function openModal(projectName) {
+    $('#myModal h4.modal-title').text(projectName);
+    $("#myModal").modal();
 }

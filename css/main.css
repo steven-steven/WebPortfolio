@@ -481,6 +481,8 @@ section#life{
     height: 50px;
     margin: 10px;
 }
+/*Modal*/
+html { font-size: 100%; }
 
 /*PDF*/
 .pdfobject-container { 
@@ -611,6 +613,44 @@ section#work {
     height: 40px;
     line-height: 40px;
 }
+#work .coopSlicker .showSlicker hr{
+	border-top: 5px double #8c8b8b;
+}
+#work .coopSlicker .showSlicker .jobContainer{
+    display:table;
+    height: 200px;
+    width: 100%;
+    
+}
+#work .coopSlicker .showSlicker .jobContainer div.jobLeft{
+    display:table-cell;
+    padding: 0px 40px 0px 20px;
+}
+#work .coopSlicker .showSlicker .jobContainer div.jobLeft .jobLogo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+#work .coopSlicker .showSlicker .jobContainer .jobRight{
+    width:100%;
+    font-size:larger;
+}
+#work .coopSlicker .showSlicker .jobContainer .jobRight p.jobHeading{
+    font-size:xx-large;
+}
+#work .coopSlicker .showSlicker .jobContainer .jobRight ul.jobList{
+    
+}
+#work .coopSlicker .showSlicker .jobContainer .jobRight ul.jobList li{
+
+}
+#work .coopSlicker .showSlicker .jobContainer .jobRight .jobDescription{
+
+}
+
+
 /*PROJECTS*/
 #project h2{
     text-align: center;
@@ -637,7 +677,7 @@ section#work {
 /* ---- grid-item ---- */
 
 .mansoryGridWrap .grid .grid-item {
-  width: 360px;
+  width: 340px;
   height: auto;
   float: left;
   /*background: #D26;*/
