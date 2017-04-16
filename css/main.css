@@ -530,12 +530,21 @@ section#life{
     line-height: 90px;
     z-index: 2;
     border: 1px solid black;
-
+    background-blend-mode: luminosity;
+    color: white;
     margin: 0 auto;
 }
 #profile .introBlock .introWrap .hoverButton:hover{
     color: white;
+   text-shadow:
+       3px 3px 0 #3A3A3A,
+     -1px -1px 0 #3A3A3A,  
+      1px -1px 0 #3A3A3A,
+      -1px 1px 0 #3A3A3A,
+       1px 1px 0 #3A3A3A;
+
     background-color: black;
+    background-blend-mode: normal;
 }
 
 nav li a:hover:after{ width: 100%; }

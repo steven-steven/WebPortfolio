@@ -6,7 +6,6 @@ console.log($(".introWrap").offset().left);
 
 $("[data-toggle='toggle']").click(function () {
     var thisButton = $(this)
-
     animateCircle(thisButton);
 });
 
@@ -42,8 +41,7 @@ function animateCircle(thisButton){
     $(selector).css("width", 0 + "px");
 }
 
-window.onresize = function (event) {
-    console.log("resize");
+function resizeProfile(event) {
     $(".animationWrap").each(function (index) {
         var thisButton = $(this)
         console.log(thisButton)
@@ -52,9 +50,11 @@ window.onresize = function (event) {
         }
     });
     //Onload or onresize
-    hoverButtonFirstTranslate = $(document).width() - $(".hoverButton").offset().left - $(".hoverButton").width();
-    hoverButtonSecondTranslate = -$(".hoverButton").offset().left + $(".introBlock").offset().left;
-    hoverButtonBackTranslate = $(".hoverButton").offset().left - $(".introBlock").offset().left;
-
+    setTimeout(function () {
+        hoverButtonFirstTranslate = $(document).width() - $(".hoverButton").offset().left - $(".hoverButton").width();
+        hoverButtonSecondTranslate = -$(".hoverButton").offset().left + $(".introBlock").offset().left;
+        hoverButtonBackTranslate = $(".hoverButton").offset().left - $(".introBlock").offset().left;
+        console.log("Hover "+hoverButtonFirstTranslate);
+    }, 500);
 };
 

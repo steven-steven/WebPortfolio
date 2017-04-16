@@ -26,11 +26,11 @@
 });
 
 resizeLifeWindow();
-
+/*
 window.onresize = function (event) {
     resizeLifeWindow();
     console.log("res")
-};
+};*/
 
 function resizeLifeWindow() {
     vph = $(window).height();

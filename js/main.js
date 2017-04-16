@@ -1,4 +1,12 @@
 ﻿
+
+window.onresize = function (event) {
+    resizeLifeWindow();
+    resizeProfile();
+    console.log("res")
+};
+
+
     var letterFilters = document.querySelectorAll(".navTabs li");
 
     var scroll = 0;
