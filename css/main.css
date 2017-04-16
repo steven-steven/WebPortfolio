@@ -482,7 +482,7 @@ section#life{
     margin: 10px;
 }
 /*Modal*/
-html { font-size: 100%; }
+html { font-size: 100% !important; }
 
 /*PDF*/
 .pdfobject-container { 
