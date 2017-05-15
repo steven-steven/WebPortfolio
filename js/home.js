@@ -8,7 +8,7 @@
 },
 {
     "projectName": "Robotics",
-    "skills": ["chosen", "allTechnicalSkills", "robotics", "allSoftSkills", "communication", "teamwork", "criticalThinking", "leadership"],
+    "skills": ["allTechnicalSkills", "robotics", "allSoftSkills", "communication", "teamwork", "criticalThinking", "leadership"],
     "shortDescription": "(Jan-Oct 2015) Learn programming and constructing LEGO robots. Joined Local to International FLL Competitions",
     "longDescription": "We took part in FLL World Competition in Australia 2015 representing Indonesia, 8th National ’Robotics Explorer’ Competition (1st place) & Indonesian Robotics Olympiad (2nd Place). Tons of fun was involved in solving challenges within the team",
     "imgSrc": "resource/img/300x200/Robotics.jpg"
@@ -22,7 +22,7 @@
 },
 {
     "projectName": "Basketball Team",
-    "skills": ["chosen","allHobbies", "allSoftSkills", "teamwork", "communication", "sports"],
+    "skills": ["allHobbies", "allSoftSkills", "teamwork", "communication", "sports"],
     "shortDescription": "(2013-2015) Position: Centre/Forward",
     "longDescription": "We won 2nd in the annual SWA-CUP inter-school tournament 2015. It taught me a life lesson as we learned to identify and cover each other's weaknesses, teamwork, and gaining my ability to grab quick reflexes in game situations. Most of all we had fun.",
     "imgSrc": "resource/img/300x200/Basketball.jpg"
@@ -120,7 +120,7 @@
 },
 {
     "projectName": "4-months work Coop at Intellisoft Development Inc",
-    "skills": ["chosen", "htmlcss", "net", "allTechnicalSkills", "communication", "teamwork", "allSoftSkills", "independence", "allSoftSkills"],
+    "skills": ["htmlcss", "net", "allTechnicalSkills", "communication", "teamwork", "allSoftSkills", "independence", "allSoftSkills"],
     "shortDescription": "(2017 Jan-Apr) Jr. Web Developer",
     "longDescription": "First work experience and learned a lot of cool web skills. Gained experience in a real work environment guided by a team of experienced developers.",
     "imgSrc": "" 
@@ -137,7 +137,7 @@
     "skills": ["chosen", "htmlcss", "allTechnicalSkills", "communication", "allSoftSkills", "independence", "creativityplanning"],
     "shortDescription": "(2015-2016) Built my first fully functional website for Earth Club as the client",
     "longDescription": "Was part of an IT project to find client, and completing the individual project following th SDLC life cycle",
-    "imgSrc": ""
+    "imgSrc": "resource/img/300x200/earthClubWeb.png"
 }
 ];
 
@@ -197,35 +197,40 @@ refreshListener();
 console.log(savedIdList);
 function displayskilledProjects() {
     var pickedProjects = ["ss"];
-    for (var i = 0; i < programStorage.length; i++) {
-        if (programStorage.key(i).includes(programStorageVariable)) {
-            var currentKey = programStorage.key(i);
-            var currentProgramID = currentKey.replace(programStorageVariable, "");
+    if (programStorage != null) {
+        for (var i = 0; i < programStorage.length; i++) {
+            if (programStorage.key(i).includes(programStorageVariable)) {
+                var currentKey = programStorage.key(i);
+                var currentProgramID = currentKey.replace(programStorageVariable, "");
 
-            console.log("saved id "+ savedIdList[i])
-            for (var j = 0; j < projectJson.length; j++) {
-                var projectObj = projectJson[j];
-                console.log(projectObj["projectName"]);
-                if (!pickedProjects.includes(projectObj["projectName"]) && projectObj["skills"].includes(currentProgramID)) {
-                    pickedProjects.push(projectObj["projectName"]);
-                    console.log("pushed");
-                    var projectName = projectObj["projectName"];
-                    var projectCaption = projectObj["shortDescription"];
-                    var projectDesc = projectObj["longDescription"];
-                    var projectImg = projectObj["imgSrc"];
-                    var skills = projectObj["skills"].toString().replace(",",", ");
+                console.log("saved id " + savedIdList[i])
+                for (var j = 0; j < projectJson.length; j++) {
+                    var projectObj = projectJson[j];
+                    console.log(projectObj["projectName"]);
+                    if (!pickedProjects.includes(projectObj["projectName"]) && projectObj["skills"].includes(currentProgramID)) {
+                        pickedProjects.push(projectObj["projectName"]);
+                        console.log("pushed");
+                        var projectName = projectObj["projectName"];
+                        var projectCaption = projectObj["shortDescription"];
+                        var projectDesc = projectObj["longDescription"];
+                        var projectImg = projectObj["imgSrc"];
+                        var skills = projectObj["skills"].toString().replace(",", ", ");
 
-                    var projectBoxHtml = '<div class="projectBox"><p class="projectTitle">' + projectName + '</p><div class="projectImg" style="background-image: url(' + projectImg + ')"></div><div class="projectHiddenDesc">' + projectDesc + '</div><p class="projectCaption">'
-                    projectBoxHtml += projectCaption + '</p>';
-                    if (true) {
-                        projectBoxHtml += ' <a onclick="openModal(\''+projectName+'\')"> Show More</a>';
+                        var projectBoxHtml = '<div class="projectBox"><p class="projectTitle">' + projectName + '</p><div class="projectImg" style="background-image: url(' + projectImg + ')"></div><div class="projectHiddenDesc">' + projectDesc + '</div><p class="projectCaption">'
+                        projectBoxHtml += projectCaption + '</p>';
+                        if (true) {
+                            projectBoxHtml += ' <a onclick="openModal(\'' + projectName + '\')"> Show More</a>';
+                        }
+                        projectBoxHtml += '</div>';
+                        $(".filteredSkillsInner").append(projectBoxHtml); /*+ '<br/><br/>Skill Set: ' + skills*/
+                        refreshListener();
                     }
-                    projectBoxHtml += '</div>';
-                    $(".filteredSkillsInner").append(projectBoxHtml); /*+ '<br/><br/>Skill Set: ' + skills*/
-                    refreshListener();
                 }
             }
         }
+    }
+    else {
+        $(".filteredSkillsInner").append("<div class=\"noLocalStorage\">Oops, seems like this feature is currently not supported by your browser. I will be fixing this. Meanwhile try open the website on another browser (suggested: Google Chrome) </br> Sorry For the Inconvenience </br> - Steven </div>");
     }
     console.log(pickedProjects);
     

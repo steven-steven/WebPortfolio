@@ -32,8 +32,9 @@ var addUniqueElements = function (uniqueID) {
 var programStorage = null;
 var savedIdList = [];
 try {
+    
     programStorage = localStorage;
-
+    
     for (var i = 0; i < programStorage.length; i++) {
         if (programStorage.key(i).includes(programStorageVariable)) {
 
@@ -43,6 +44,8 @@ try {
             savedIdList.push(currentProgramID);
         }
     }
+    
+    
 }
 catch (err) {
     storageAvailable = false;

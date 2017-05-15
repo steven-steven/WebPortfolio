@@ -13,7 +13,7 @@ window.onresize = function (event) {
 
     // Cache selector
     var lastId,
-    topMenu = $(".navTabs"),
+    topMenu = $(".navTabs, .begin"),
 
     // All list items
     menuItems = topMenu.find("a"),
