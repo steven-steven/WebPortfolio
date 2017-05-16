@@ -1,15 +1,27 @@
 ﻿
 var programStorageVariable = "skillType";
+var storageAvailable = true;
 
 /*****************************ADDS AND REMOVES Local Storage (Programs or Emails)************************************/
 function addLocalStorage(key, value, programID) {
     programID || (programID = 0);
+    
 
     if (storageAvailable) {
         programStorage.setItem(key, value);
     }
-    addUniqueElements(programID);
-
+    try{
+        addUniqueElements(programID);
+    }
+    catch (e) {
+        console.log(e)
+        var uniqueID = programID.replace(programStorageVariable, "");
+        var button = $("#" + uniqueID);
+        button.addClass("active");
+        button.find("i")[0].innerHTML = "check_box";
+    }
+    
+    
 }
 
 function removeLocalStorage(key) {
@@ -28,9 +40,13 @@ var addUniqueElements = function (uniqueID) {
     //DO NO TOUCH THIS FUNCTION IT IS USED TO DELETE THE OTHER STUFF ON OTHER PAGES WHEN YOU ADD A PROGRAM (I.E REMOVE CHECKBOXES ON PROGRAM FINDER --> THIS GETS SET IN THE DOCUMENT READY OF THAT SPECIFIC PAGE.)
 }
 */
+
+
+
 /****************** UPDATE CURRENT STORAGE IDS ON LOAD **********************/
 var programStorage = null;
 var savedIdList = [];
+var noCheckFlag = true;
 try {
     
     programStorage = localStorage;
@@ -38,13 +54,27 @@ try {
     for (var i = 0; i < programStorage.length; i++) {
         if (programStorage.key(i).includes(programStorageVariable)) {
 
+            noCheckFlag = false;
+
             var currentKey = programStorage.key(i);
             var currentProgramID = currentKey.replace(programStorageVariable, "");
 
             savedIdList.push(currentProgramID);
         }
     }
-    
+    if (noCheckFlag == true) {
+        var value = " ";
+        addLocalStorage(programStorageVariable + "allTechnicalSkills", value, "allTechnicalSkills");
+        savedIdList.push("allTechnicalSkills");
+        savedIdList.push("allSoftSkills");
+        savedIdList.push("allHobbies");
+        savedIdList.push("allCertifications");
+        console.log("yellow")
+        addLocalStorage(programStorageVariable + "allSoftSkills", value, "allSoftSkills");
+        addLocalStorage(programStorageVariable + "allHobbies", value, "allHobbies");
+        addLocalStorage(programStorageVariable + "allCertifications", value, "allCertifications");
+
+    }
     
 }
 catch (err) {
@@ -56,7 +86,6 @@ var keySessionExpiry = "sessionExpiryTime";
 //30 min in seconds
 var sessionTimeoutPeriod = 1800;
 //Flags when items cannot be added/removed from storage
-var storageAvailable = true;
 var sessionStateAvailable = true;
 
 function checkSessionExpiry() {
