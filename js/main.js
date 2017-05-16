@@ -13,7 +13,7 @@ window.onresize = function (event) {
 
     // Cache selector
     var lastId,
-    topMenu = $(".navTabs, .begin"),
+    topMenu = $(".navTabs"),
 
     // All list items
     menuItems = topMenu.find("a"),
@@ -40,6 +40,19 @@ window.onresize = function (event) {
             scrollTop: Math.round(offsetTop)
         }, 300);
         
+        e.preventDefault();
+    });
+    $(".begin").find("a").click(function (e) {
+
+        var href = $(this).attr("href"),
+          //elementToALink = document.getElementById("A").getBoundingClientRect().top + window.scrollY,
+          offsetTop = href === "#" ? 0 : document.getElementById(href.split('#')[1]).getBoundingClientRect().top - topMenuHeight + window.scrollY + 1;
+        //console.log(offsetTop);
+        //console.log(href);
+        $('html, body').stop().animate({
+            scrollTop: Math.round(offsetTop)
+        }, 300);
+
         e.preventDefault();
     });
 

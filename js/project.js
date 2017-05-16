@@ -45,11 +45,14 @@ function displayMansoryProjects() {
             var htmlString = '<div class="grid-item grid-item--height4">';
             htmlString+= '<div class="accordionPanel" href="#project'+projectCount+'" data-toggle="collapse">'
             htmlString+= '<div class="innerPanel">&nbsp;<div class="projectImage"><img src="'+ projectImg +'"></div>'
-            htmlString+= '<div class="projectCaption"><b>'+projectName + '</b> - ' +projectCaption+'</div></div>';
+            htmlString += '<div class="projectCaption"><b>' + projectName + '</b> - ' + projectCaption + '</div></div>';
             htmlString+= '<div class="iconWrap"><i class="material-icons">keyboard_arrow_down</i></div></div>'
             htmlString+= '<div id="project'+projectCount+'" class="accordion collapse">';
-            htmlString+= '<div class="hiddenAccordion">'+projectDesc+'</div></div></div>';
-
+            htmlString += '<div class="hiddenAccordion">' + projectDesc;
+            if (projectObj["modal"]) {
+                htmlString += '</br></br><a class="modalLink" onclick="openModal(\'' + projectName + '\',\'' + projectObj["modal"] + '\')"> Show More</a></br>';
+            } 
+            htmlString += '</div></div></div>';
             $(".grid").append(htmlString);
             
         }

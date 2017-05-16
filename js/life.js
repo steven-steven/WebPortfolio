@@ -13,8 +13,15 @@
         $(selector).addClass('active');
 
         $(this).toggleClass('active');
-        var width = $(window).height() - $(".toggleLife").width()*2;
+        var width = $(window).width() - $(".toggleLife").width()*2;
         $(selector).css("width", width + "px");
+        //setTimeout(function () {
+
+        //}, 3000);
+        $('.lifeWindow').animate({ scrollLeft: $(this).prev().offset().left }, 800);
+        console.log($(this).offset().left)
+
+        
     } else {
         $(selector).removeClass('active');
         $(this).toggleClass('active');

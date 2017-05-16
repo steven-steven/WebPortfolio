@@ -47,7 +47,7 @@ section#profile{
     background-color:#343434;
 }
 section#work{
-    background-color:#fff;
+    background-color:rgb(243, 236, 219);
 }
 section#project{
     background-color:#f5f5f5;
@@ -166,6 +166,9 @@ section#life{
 
 /*Home*/
 .welcome{
+    background-image: url(../resource/img/background/background1.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
     background-color: black;
     color: white;
     width: 100%;
@@ -195,6 +198,7 @@ section#life{
 }
 .welcome div.bigButton a{
     border: 1px solid white;
+    background-color:rgba(0, 0, 0, 0.5);
 }
 .welcome div.bigButton:hover a{
     background: white;
@@ -360,6 +364,7 @@ section#life{
     text-align: center;
 }
 
+
     /*Skill Picker*/
 #home div.tabsWrap .tabContentArea #skillPickerTab .inlineBlocksContainer .inlineBlocks{
     min-width: 250px;
@@ -522,7 +527,35 @@ div.bigButton a span{
     margin: 10px;
 }
 /*Modal*/
+.modalLink{
+    cursor: pointer;
+    width: 100%;
+    height: 20px;
+    display: block;
+    background: grey;
+    font-size: 15px;
+    color: black;
+}
 
+.modalLink:hover{
+    background: black;
+    color: white;
+
+}
+#project .modalLink{
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    height: 20px;
+    display: block;
+    font-size: 15px;
+    color: black;
+}
+.modalText{
+    padding: 10px;
+    font-size: 15px;
+}
 
 /*PDF*/
 .pdfobject-container { 
@@ -653,7 +686,8 @@ nav li a:hover:after{ width: 100%; }
 
 /*COOP*/
 section#work {
-    height: 550px;
+    height: 750px;
+    padding-left: 80px;
 }
 #work .coopSlicker{
     width: 70%;
@@ -663,12 +697,19 @@ section#work {
     margin-bottom: 30px;
     margin-top: 20px;
     width: 100%;
-    height: 300px;
+    height: 500px;
     border: 1px solid black;
+}
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
+.slick-slider{
+    background: whitesmoke; 
 }
 #work .coopSlicker .slider-nav div{
     text-align: center;
-    background-color: grey;
+    /*background-color: grey;*/ 
+    font-size: 15px;
     height: 40px;
     line-height: 40px;
 }
@@ -862,7 +903,7 @@ section#life{
 }
 #life .lifeWindow .lifePanel{
     height: 100%;
-    width: 120px;
+    width: 150px;
     background: red;
     display: inline-block;
     vertical-align:top;
@@ -888,11 +929,24 @@ section#life{
     background: white;
     width: 100%;
     height: 100%;
+    font-size: 13px;
+
+    text-align:center;
+    /* Old browsers */
+    background: linear-gradient(to left, white 50%, black 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    margin-left:10px;
+    transition:all 1s ease;
+}
+#life .lifeWindow .lifePanel:hover .lifeCategoryText {
+    background-position:left bottom;
+    color: white;
 }
 
 #life .lifeWindow .lifePanel.lifeAccordion{
     background: white;
-    border-width: 3px 0px;
+    border-width: 0px 0px;
     border-style: solid;
     border-color: black;
 

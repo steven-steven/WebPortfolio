@@ -1,5 +1,5 @@
 ﻿//Onload or onresize
-var hoverButtonFirstTranslate = $(document).width() - $(".hoverButton").offset().left - $(".hoverButton").width();
+var hoverButtonFirstTranslate = $("#profile").width() - $(".hoverButton").offset().left - $(".hoverButton").width();
 var hoverButtonSecondTranslate = -$(".hoverButton").offset().left + $(".introBlock").offset().left;
 var hoverButtonBackTranslate = $(".hoverButton").offset().left - $(".introBlock").offset().left;
 console.log($(".introWrap").offset().left);
@@ -51,7 +51,7 @@ function resizeProfile(event) {
     });
     //Onload or onresize
     setTimeout(function () {
-        hoverButtonFirstTranslate = $(document).width() - $(".hoverButton").offset().left - $(".hoverButton").width();
+        hoverButtonFirstTranslate = $("#profile").width() - $(".hoverButton").offset().left - $(".hoverButton").width();
         hoverButtonSecondTranslate = -$(".hoverButton").offset().left + $(".introBlock").offset().left;
         hoverButtonBackTranslate = $(".hoverButton").offset().left - $(".introBlock").offset().left;
         console.log("Hover "+hoverButtonFirstTranslate);
