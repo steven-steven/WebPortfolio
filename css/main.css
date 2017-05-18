@@ -759,8 +759,8 @@ section#work {
 /* ---- grid ---- */
 
 .grid {
-  max-width: 1300px;
-  width: 90%;
+  /*max-width: 1300px;*/
+  width: 95%;
   margin: 0 auto;
 }
 .mansoryGridWrap{
@@ -777,7 +777,7 @@ section#work {
 /* ---- grid-item ---- */
 
 .mansoryGridWrap .grid .grid-item {
-  width: 340px;
+  width: 330px;
   height: auto;
   float: left;
   /*background: #D26;*/

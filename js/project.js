@@ -3,7 +3,7 @@
 function refreshMansory(){
     var $grid = $('.grid').masonry({
         itemSelector: '.grid-item',
-        columnWidth: 343
+        columnWidth: 333
     });
     $(".accordionPanel").on('click', function () {
         if (!$(this).siblings('.accordion')[0].classList.contains('collapse')) {
