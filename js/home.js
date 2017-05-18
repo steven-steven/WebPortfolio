@@ -133,7 +133,7 @@
 },
 {
     "projectName": "4-months work Coop at Intellisoft Development Inc",
-    "skills": ["htmlcss", "net", "allTechnicalSkills", "communication", "teamwork", "allSoftSkills", "independence", "allSoftSkills"],
+    "skills": ["htmlcss", "grails", "sql", "net", "allTechnicalSkills", "communication", "teamwork", "allSoftSkills", "independence", "allSoftSkills"],
     "shortDescription": "(2017 Jan-Apr) Jr. Web Developer",
     "longDescription": "First work experience and I learned a lot of cool web skills. Summary: Developed web solutions for George Brown College. Involved in both front-end and back-end developments, and other web frameworks like ASP.NET and Grails.",
     "imgSrc": "resource/img/300x200/intellisoft.png",
